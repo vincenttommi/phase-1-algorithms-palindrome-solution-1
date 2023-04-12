@@ -1,10 +1,18 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+
+function isPalindrome(str) {
+  // Convert the string to lowercase and remove non-alphanumeric characters
+  str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Reverse the string and compare it to the original string
+  return str === str.split('').reverse().join('');
 }
 
-/* 
-  Add your pseudocode here
-*/
+// Test cases
+console.log(isPalindrome('abba')); // Output: true
+console.log(isPalindrome('racecar')); // Output: true
+console.log(isPalindrome('a')); // Output: true
+console.log(isPalindrome('robot')); // Output: false
+console.log(isPalindrome('ab')); // Output: false
 
 /*
   Add written explanation of your solution here
